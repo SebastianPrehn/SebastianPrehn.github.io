@@ -1,0 +1,30 @@
+html {
+  background-color:#FFFFFF
+}
+body {
+  color:#668;
+  font-size:16px;
+  font-size:1.6em;
+  text-align:center;
+  letter-spacing:0.01em;
+  margin:0
+}
+h1 {
+  font-size:0.6em;
+  opacity:0.4
+}
+
+.social {
+  margin:0;
+  padding:0;
+  margin-top:-0.25em;
+  text-align:center
+}
+.social li {
+  display:inline;
+  margin:0 0.3em;
+  font-size:1.5em
+}
+.social li a {
+  text-decoration:none
+}
