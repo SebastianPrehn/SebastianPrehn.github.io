@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block section_name %}{{ section.title | lower }}{% endblock %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock %}
+
+{% block content %}
+<a href="/blog/atom.xml">RSS</a>
+{% for page in section.pages %}
+<article>
+    <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+    <time>{{ page.date }}</time>
+    {% if page.summary %}
+    <p>{{ page.summary }}</p>
+    {% endif %}
+</article>
+{% endfor %}
+{% endblock %}

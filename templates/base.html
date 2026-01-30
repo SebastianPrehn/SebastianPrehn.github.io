@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/">
+          <span class="lambda">λ</span>
+            <span class="typewriter">~/{% block section_name %}{% endblock %}</span>
+            <span class="blink_me">|</span>
+            </span>
+        </a>
+      </h1>
+      <nav>
+        <a href="/">home</a>
+        <a href="/about">about</a>
+        <a href="/projects">projects</a>
+        <a href="/blog/">blog</a>
+      </nav>
+    </header>
+    
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+      <p>© 2026 Sebastian Larsen Prehn | 
+        <a href="/gpg-key.asc">GPG Key</a></p>
+    </footer>
+  </body>
+</html>

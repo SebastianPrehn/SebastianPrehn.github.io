@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Sebastian Larsen Prehn's website</h2>
+<p><a href="mailto:slp@sebastianprehn.dk">slp@sebastianprehn.dk</a> <a href="/gpg-key.asc">gpg</a> <a href="https://github.com/SebastianPrehn">github</a></p>
+
+<p>I'm Sebastian, a Master's student in Computer Science at the University of Copenhagen, where my main interest is computer security and privacy.</p>
+
+<p>My broader interests include computer architecture, embedded and distributed systems, and high-performance computing.</p>
+
+<p>I'm a Danish <a href="https://en.wikipedia.org/wiki/Hacker_culture">hacker</a>. I love exploring how systems work, as well as  tinkering with software such as GNU Emacs (my editor of choice). You can check out my current <a href="/projects">personal projects</a>.</p>
+
+<p>When I'm not studying, you'll find me hiking, bouldering, or practicing sabre fencing.</p>
+
+<h3>Recent Posts</h3>
+<ul>
+{% set blog = get_section(path="blog/_index.md") %}
+{% for page in blog.pages | slice(end=5) %}
+    <li>
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+        <span>{{ page.date }}</span>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

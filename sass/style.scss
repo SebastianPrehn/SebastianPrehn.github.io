@@ -1,0 +1,125 @@
+@import "variables";
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Base styles
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    font-size: 1.125rem;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $spacing-unit * 2;
+}
+
+// Header
+header {
+    margin-bottom: $spacing-unit * 0.5;
+    border-bottom: 1px solid $primary-color;
+    padding-bottom: $spacing-unit;
+    
+    h1 a {
+        text-decoration: none;
+        color: $primary-color;
+        
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+nav {
+    margin-top: $spacing-unit;
+    
+    a {
+        margin-right: $spacing-unit;
+        color: $primary-color;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Main content
+article {
+    margin-bottom: $spacing-unit * 2;
+    
+    h1, h2, h3 {
+        margin-top: $spacing-unit * 1.5;
+        margin-bottom: $spacing-unit * 0.5;
+    }
+    
+    p {
+        margin-bottom: $spacing-unit;
+    }
+    
+    code {
+        background: #f4f4f4;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-size: 0.9em;
+    }
+    
+    pre {
+        background: #f4f4f4;
+        padding: $spacing-unit;
+        overflow-x: auto;
+        border-radius: 5px;
+        margin-bottom: $spacing-unit;
+        
+        code {
+            background: none;
+            padding: 0;
+        }
+    }
+}
+
+time {
+    color: $secondary-color;
+    font-size: 0.9rem;
+}
+
+// Footer
+footer {
+    margin-top: $spacing-unit * 3;
+    padding-top: $spacing-unit;
+    border-top: 1px solid $border-color;
+    font-size: 0.9rem;
+    color: $secondary-color;
+    
+    a {
+        color: $primary-color;
+    }
+}
+
+// Lists
+ul, ol {
+    margin-left: $spacing-unit * 2;
+    margin-bottom: $spacing-unit;
+}
+
+// Links
+a {
+    color: $primary-color;
+    
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+// blinker effect
+.blink_me {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
