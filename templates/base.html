@@ -30,8 +30,9 @@
     </main>
     
     <footer>
-      <p>© 2026 Sebastian Larsen Prehn | 
-        <a href="/gpg-key.asc">GPG Key </a><a href="/blog/atom.xml">RSS</a></p>
+      <p>© {{ now() | date(format="%Y") }} Sebastian Larsen Prehn | 
+        <a href="/gpg-key.asc">GPG Key</a>
+        <a href="/blog/atom.xml">RSS</a></p>
     </footer>
   </body>
 </html>

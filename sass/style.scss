@@ -97,6 +97,9 @@ footer {
     a {
         color: $primary-color;
     }
+    a + a {
+        margin-left: 0.25rem;  // Space between consecutive links
+    }
 }
 
 // Lists
