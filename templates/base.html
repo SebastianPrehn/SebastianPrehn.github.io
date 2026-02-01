@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    <script>
+      // Apply saved theme immediately before page renders
+      const theme = localStorage.getItem('theme');
+      if (theme) document.documentElement.setAttribute('data-theme', theme);
+    </script>
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
   </head>
   <body>
@@ -34,5 +39,8 @@
         <a href="/gpg-key.asc">GPG Key</a>
         <a href="/blog/atom.xml">RSS</a></p>
     </footer>
+
+    <!-- Theme toggle script -->
+    <script src="{{ get_url(path="theme-toggle.js") }}"></script>
   </body>
 </html>

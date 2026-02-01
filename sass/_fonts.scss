@@ -1,0 +1,43 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
+
+// Generate Inter font classes
+$inter-weights: (
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700
+);
+
+@each $name, $weight in $inter-weights {
+  .inter-#{$name} {
+    font-family: "Inter", sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+  }
+}
+
+// Generate JetBrains Mono font classes
+$jetbrains-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
+
+$font-styles: (
+  "normal": normal,
+  "italic": italic
+);
+
+@each $weight-name, $weight-value in $jetbrains-weights {
+  @each $style-name, $style-value in $font-styles {
+    $class-name: if($style-value == normal, $weight-name, "#{$weight-name}-#{$style-name}");
+    
+    .jetbrains-mono-#{$class-name} {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: $weight-value;
+      font-style: $style-value;
+    }
+  }
+}
+

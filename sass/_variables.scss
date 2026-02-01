@@ -1,5 +1,23 @@
+// Fonts
+$font-body: "Inter", system-ui, -apple-system, sans-serif;
+$font-mono: "JetBrains Mono", monospace;
+
+// Layout
 $max-width: 70%;
-$primary-color: #333;
-$secondary-color: #666;
-$border-color: #ccc;
 $spacing-unit: 1rem;
+
+// Light mode colors (default)
+$primary-color: #1e293b;
+$secondary-color: #64748b;
+$accent-color: #3b82f6;
+$border-color: #1e293b;
+$code-bg: #f8fafc;
+$bg-color: #ffffff;
+
+// Dark mode colors
+$dark-primary-color: #e5e7eb;
+$dark-secondary-color: #9ca3af;
+$dark-accent-color: #60a5fa;
+$dark-border-color: #374151;
+$dark-code-bg: #111111;
+$dark-bg-color: #000000;
