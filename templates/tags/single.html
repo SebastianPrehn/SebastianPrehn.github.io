@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Posts tagged "{{ term.name }}" | {{ config.title }}{% endblock %}
+{% block section_name %}blog/tags/{{ term.name }}{% endblock %}
+
+{% block content %}
+<h2>Posts tagged "{{ term.name }}"</h2>
+
+<ul>
+  {% for page in term.pages %}
+  <li>
+    <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+    <a href="{{ page.permalink }}">{{ page.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

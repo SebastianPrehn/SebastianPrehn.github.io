@@ -4,13 +4,48 @@
 {% block title %}{{ section.title }} | {{ config.title }}{% endblock %}
 
 {% block content %}
+<!-- Tag filter -->
+{% set_global all_tags = [] %}
 {% for page in section.pages %}
-<article>
+  {% if page.taxonomies.tags %}
+    {% for tag in page.taxonomies.tags %}
+      {% if tag not in all_tags %}
+        {% set_global all_tags = all_tags | concat(with=tag) %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% if all_tags %}
+<div class="tag-filter">
+  <span class="filter-label">Filter by tag:</span>
+  <button class="tag-filter-btn active" data-tag="all">all</button>
+  {% for tag in all_tags | sort %}
+    <button class="tag-filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div id="posts-container">
+  {% for page in section.pages %}
+  <article data-tags="{% if page.taxonomies.tags %}{{ page.taxonomies.tags | join(sep=',') }}{% endif %}">
     <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
-    <time>{{ page.date }}</time>
+    <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+    {% if page.taxonomies.tags %}
+    <div class="tags">
+      {% for tag in page.taxonomies.tags %}
+        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="tag">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+    
     {% if page.summary %}
     <p>{{ page.summary }}</p>
     {% endif %}
-</article>
-{% endfor %}
+  </article>
+  {% endfor %}
+</div>
+
+<script src="{{ get_url(path='blog-filter.js') }}"></script>
+
 {% endblock %}

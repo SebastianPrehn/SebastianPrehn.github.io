@@ -1,6 +1,8 @@
 +++
 title = "Why Zola?"
 date = 2026-01-30
+[taxonomies]
+tags=["zola"]
 +++
 
 I recently started using [Zola](https://www.getzola.org/) as my [static site generator](https://en.wikipedia.org/wiki/Static_site_generator) in order to get some experience with designing my website (hosted on [GitHub](https://github.com/SebastianPrehn/SebastianPrehn.github.io).

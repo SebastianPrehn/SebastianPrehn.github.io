@@ -1,6 +1,8 @@
 +++
 title = "This Year, I'll …"
 date = 2026-01-31
+[taxonomies]
+tags=["emacs", "carnival"]
 +++
 
 For January 2026 of the [Emacs carnival](https://www.emacswiki.org/emacs/Carnival), the theme set by [Christian Tietze](https://christiantietze.de/posts/2026/01/emacs-carnival-2026-01-this-year-i-will/) is
