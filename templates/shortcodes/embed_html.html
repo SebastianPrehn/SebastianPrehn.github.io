@@ -1,0 +1,3 @@
+{% set html_path = "/static/" ~ path %}
+{% set content = load_data(path=html_path) %}
+{{ content | safe }}

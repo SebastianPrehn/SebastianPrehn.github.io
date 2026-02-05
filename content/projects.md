@@ -10,4 +10,4 @@ We're still working on the first public version, with me playing through Sly 3 a
 
 ## Dotfiles
 
-Everyone shares their [dotfiles](https://github.com/SebastianPrehn/dotfiles), right?
+My [dotfiles](https://github.com/SebastianPrehn/dotfiles) source code can be found on GitHub.
