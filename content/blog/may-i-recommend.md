@@ -31,6 +31,6 @@ The biggest lesson I have taken from my personal venture into other editors is t
 
 > Emacs is powerful, but complicated to learn.
 
-Our keybindings are unique, the out-of-the-box experience is rather lackluster, and we have so many ways to do something that it can be hard for a newcomer to get started unless they are determined to learn the tool. Our documentation is either aged, or very targeted towards a specific author's idea of how Emacs should be used.
+Our keybindings are unique, the out-of-the-box experience is rather lackluster, and we have so many ways to do something that it can be hard for a newcomer to get started unless they are determined to learn the tool. Our online documentation found when searching on the internet is either aged, or very targeted towards a specific author's idea of how Emacs should be used.
 
 I have not decided whether I find these to be weaknesses, or just makes Emacs a specialist tool for only the kind of people who can tolerate a learning curve (eerily similar to another one of my recent interests, Nix). However, I find a strength to be seeking out experiences, and I have spent the last few years trying out many different editors, and every time I come back to realize that I prefer Emacs. Because I can make it uniquely mine. 
